@@ -1,35 +1,35 @@
 <% include partials/header %>
-<div class="container">
-  <div class="row">
-    <div class="col s12 m6">
-      <div class="card-panel center z-depth-3" style="background-color:#272746">
-        <i class="large material-icons">email</i>
-        <h1>Contact Me</h1>
-        <p>Feel free to contact me about job propositions or questions</p>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card-panel center z-depth-3" style="background-color:#272746">
+          <i class="large material-icons">email</i>
+          <h1>Contact Me</h1>
+          <p>Feel free to contact me about job propositions or questions</p>
+        </div>
       </div>
-    </div>
-    <div class="col s12 m6">
-      <div class="card-panel z-depth-3">
-        <form>
-          <div class="input-field">
-            <input type="text" name="name" id="user">
-            <label for="user">Full Name</label>            
-          </div>
-          <div class="input-field">
-              <input type="email" name="email" id="email" class="validate">
-              <label for="email">Email</label>            
+      <div class="col s12 m6">
+        <div class="card-panel z-depth-3">
+          <form>
+            <div class="input-field">
+              <input type="text" name="name" id="user">
+              <label for="user">Full Name</label>            
             </div>
             <div class="input-field">
-                <textarea name="message" id="message" class="materialize-textarea"></textarea>
-                <label for="message">Enter Message</label>            
+                <input type="email" name="email" id="email" class="validate">
+                <label for="email">Email</label>            
               </div>
-              <input type="submit" name="submit" value="send" class="btn right">
-              <div class="clearfix"></div>
-        </form>
+              <div class="input-field">
+                  <textarea name="message" id="message" class="materialize-textarea"></textarea>
+                  <label for="message">Enter Message</label>            
+                </div>
+                <input type="submit" name="submit" value="send" class="btn right">
+                <div class="clearfix"></div>
+          </form>
+        </div>
       </div>
-
     </div>
-
-  </div>
-</div> 
+  </div> 
+</main>
 <% include partials/footer %>   
