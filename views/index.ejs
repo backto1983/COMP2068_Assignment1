@@ -1,8 +1,21 @@
 <% include partials/header %>
-    <div class="container"></div>
-    <h1><%= title %></h1>
-    <div class="col-sm-7 jumbotron">
-      <p><%= message %></p>
-    </div>  
+    <!-- Homepage -->
+    <main class="center" style="margin-left: 200px; margin-right: 200px">
+      <div class="section" id="home" style="color:#272746">
+        <h5 id="mainText" class="center"><%= title %></h5>
+        <h1 class="center"><%= name %></h1>
+        <h6 id="mainText" class="center"><%= message %></h6>
+      </div>
+
+    <!-- Fixed Action Button -->
+      <div class="fixed-action-btn vertical">
+        <a class="btn-floating btn-large  blue-grey darken-4"><i class="fa fa-globe"></i></a>
+        <ul>
+          <li><a class="btn-floating  blue darken-4"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="btn-floating blue-grey lighten-1"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="btn-floating grey darken-3"> <i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+    </main>
 <% include partials/footer %>   
  

@@ -1,6 +1,7 @@
 exports.homePage = (req, res, next) => {
     res.render('index', { 
       title: 'Assignment 1 - Express Portfolio Website',
+      name: 'Henrique Oliveira',
       message: 'Welcome to my personal portfolio website built using Express.js, Materialize front-end framework and implementing the EJS templating engine. Site deployment is done via GitHub and Heroku.' });
   };
   
@@ -31,6 +32,6 @@ exports.homePage = (req, res, next) => {
       title: 'Contact Me',
       message });
   };
-  
+
 
   

@@ -2164,7 +2164,10 @@ html {
 body {
   margin: 0;
   background-color: rgb(165, 159, 159);
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.8); 
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /**
@@ -2199,6 +2202,7 @@ figure,
 main {
   /* 1 */
   display: block;
+  flex: 1 0 auto;
 }
 
 /**
@@ -2948,7 +2952,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #272746;
 }
 
 .page-footer .footer-copyright {
