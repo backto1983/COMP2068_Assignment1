@@ -8224,6 +8224,7 @@ $jscomp.polyfill = function (e, r, p, m) {
      * @param {Element} el
      * @param {Object} options
      */
+    
     function FloatingActionButton(el, options) {
       _classCallCheck(this, FloatingActionButton);
 
