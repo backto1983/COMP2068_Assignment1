@@ -33,10 +33,9 @@ exports.homePage = (req, res, next) => {
   };
 
   exports.services = (req, res, next) => {
-    const message = 'Some of my services';
     res.render('services', { 
-      title: 'Services  ',
-      message });
+      title: 'Skills'
+      });
   };
 
   exports.contact = (req, res, next) => {
