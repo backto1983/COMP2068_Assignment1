@@ -1,20 +1,30 @@
+<!--
+ * File Name: projects.ejs
+ * Author Name: Henrique Oliveira
+ * Website Name: Assignment 1 - Express Portfolio Website
+ * File Description: card-reveal style page, with information about school projects 
+-->
+
 <% include partials/header %>
 <!--Projects-->
 <main>
   <div class="section" id="projects">
     <div class="container">
-      <h3 class="header text_b center" style="color:#272746"><%= title %></h3>
+      <h3 class="header text_b center" style="color: #272746">My Projects</h3>
       <div class="row">
         <!--First Card-->
         <div class="col s12 m12 l4">
           <div class="card hoverable grey darken-3">
             <div class="card-image">
+              <!--Image showcasing project; other cards also include pictures-->
               <img class="activator" src="/images/bookstore.jpg">
             </div>
             <div class="card-content">
               <span class="card-title activator center"><%= projectTitle1 %></span>
+              <!--Link to project website; other cards also include links-->
               <p class="center"><a class="purple-text text-lighten-5" href="https://assignment2-bookstore.azurewebsites.net">Project link</a></p>
             </div>
+            <!--After title is clicked, another card is revealed with more information-->
             <div class="card-reveal grey darken-3">
               <span class="card-title center"><%= projectTitle1 %></span>
               <p style="text-align: justify"><%= project1 %></p>

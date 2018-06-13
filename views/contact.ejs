@@ -1,3 +1,10 @@
+<!--
+ * File Name: contact.ejs
+ * Author Name: Henrique Oliveira
+ * Website Name: Assignment 1 - Express Portfolio Website
+ * File Description: form for contact
+-->
+
 <% include partials/header %>
 <main>
   <div class="container">
@@ -11,6 +18,7 @@
       </div>
       <div class="col s12 m6">
         <div class="card-panel z-depth-3">
+          <!--Form with three fields: name, email and message-->
           <form>
             <div class="input-field">
               <input type="text" name="name" id="user">
@@ -19,13 +27,13 @@
             <div class="input-field">
                 <input type="email" name="email" id="email" class="validate">
                 <label for="email">Email</label>            
-              </div>
-              <div class="input-field">
-                  <textarea name="message" id="message" class="materialize-textarea"></textarea>
-                  <label for="message">Enter Message</label>            
-                </div>
-                <input type="submit" name="submit" value="send" class="btn right">
-                <div class="clearfix"></div>
+            </div>
+            <div class="input-field">
+                <textarea name="message" id="message" class="materialize-textarea"></textarea>
+                <label for="message">Enter Message</label>            
+            </div>
+            <input type="submit" name="submit" value="send" class="btn right">
+            <div class="clearfix"></div>
           </form>
         </div>
       </div>

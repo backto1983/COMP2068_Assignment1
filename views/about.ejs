@@ -1,15 +1,22 @@
+<!--
+ * File Name: about.ejs
+ * Author Name: Henrique Oliveira
+ * Website Name: Assignment 1 - Express Portfolio Website
+ * File Description: self description; contains picture and small bio
+-->
+
 <% include partials/header %>
 <main style="color:#272746">
   <div id="intro" class="section">
     <div class="container">  
       <div class="row">
         <div  class="col s12">
-          <h2 class="center header"><%= quote %></h2>
+          <h2 class="center header"><%= quote %></h2> <!--Calling a variable defined in viewsController to show a message-->
         </div>
       </div>
       <div class="row center">
         <div class="col s12 m12 l3">
-          <img class="responsive-img" src="/images/about.jpg">
+          <img class="responsive-img" src="/images/about.jpg"> <!--Div containing a picture-->
         </div>
           <div class="col s12 m12 offset-l1 l8">
             <h5 class="center"><b>ABOUT ME</b></h5>

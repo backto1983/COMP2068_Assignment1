@@ -1,3 +1,14 @@
+/**
+ * File Name: viewController.js
+ * Author Name: Henrique Oliveira
+ * Website Name: Assignment 1 - Express Portfolio Website
+ * File Description: logical javaScript statements to control HTML views
+ */
+
+// Module used to send email 
+ const nodemailer = require('nodemailer');
+
+ // Each function below control one view (index, about, projects, services and contact) 
 exports.homePage = (req, res, next) => {
     res.render('index', { 
       title: 'Assignment 1 - Express Portfolio Website',
@@ -22,7 +33,7 @@ exports.homePage = (req, res, next) => {
     const project3 = 'This is a document for a school assignment. It shows steps to create a Project Plan, which includes a Work Breakdown Structure, a Gantt Chart, a Risk Management Plan and more.';
     const projectTitle3 = 'Project Plan';
     res.render('projects', { 
-      title: 'My Projects',
+      title: 'Projects',
       projectTitle1,
       project1,
       projectTitle2,
@@ -34,15 +45,40 @@ exports.homePage = (req, res, next) => {
 
   exports.services = (req, res, next) => {
     res.render('services', { 
-      title: 'Skills'
+      title: 'Services'
       });
   };
 
   exports.contact = (req, res, next) => {
     const message = 'Feel free to contact me about job propositions or questions';
     res.render('contact', { 
-      title: 'Contact Me',
-      message });
+      title: 'Contact',
+      message });      
+
+      /*
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'yourEmail@gmail.com',
+          pass: 'yourPassword'
+        }
+      });
+      
+      const mailOptions = {
+        from: 'yourEmail@gmail.com',
+        to: 'myfriend@yahoo.com',
+        subject: 'Sending Email using Node.js',
+        text: 'That was easy!'
+      };
+      
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          return console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+      */
   };
 
 
