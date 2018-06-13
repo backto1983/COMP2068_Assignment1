@@ -1,0 +1,60 @@
+<% include partials/header %>
+<!--Projects-->
+<main>
+  <div class="section" id="projects">
+    <div class="container">
+      <h3 class="header text_b center" style="color:#272746"><%= title %></h3>
+      <div class="row">
+        <!--First Card-->
+        <div class="col s12 m12 l4">
+          <div class="card hoverable grey darken-3">
+            <div class="card-image">
+              <img class="activator" src="/images/bookstore.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator center"><%= projectTitle1 %></span>
+              <p class="center"><a class="purple-text text-lighten-5" href="https://assignment2-bookstore.azurewebsites.net">Project link</a></p>
+            </div>
+            <div class="card-reveal grey darken-3">
+              <span class="card-title center"><%= projectTitle1 %><i class="mdi-navigation-close right"></i></span>
+              <p style="text-align: justify"><%= project1 %></p>
+            </div>
+          </div>
+        </div>
+        <!--Second Card-->
+        <div class="col s12 m12 l4">
+          <div class="card hoverable grey darken-3">
+            <div class="card-image">
+              <img class="activator" src="/images/javaCode.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator center"><%= projectTitle2 %></span>
+              <p class="center"><a class="purple-text text-lighten-5" href="https://www.youtube.com/watch?v=NSEX1b3Phws">Project link</a></p>
+            </div>
+            <div class="card-reveal grey darken-3">
+              <span class="card-title center"><%= projectTitle2 %><i class="mdi-navigation-close right"></i></span>
+              <p style="text-align: justify"><%= project2 %></p>
+            </div>
+          </div>
+        </div> 
+        <!--Third Card-->
+        <div class="col s12 m12 l4">
+          <div class="card hoverable grey darken-3">
+            <div class="card-image">
+              <img class="activator" src="/images/SDLC.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator center"><%= projectTitle3 %></span>
+              <p class="center"><a class="purple-text text-lighten-5" href="https://docs.google.com/document/d/1RJQVJAKYf65rllWMH96L2Ub_O5T0j9ItVg3IQpps948/edit?usp=sharing">Project link</a></p>
+            </div>
+            <div class="card-reveal grey darken-3">
+              <span class="card-title center"><%= projectTitle3 %><i class="mdi-navigation-close right"></i></span>
+              <p style="text-align: justify"><%= project3 %></p>
+            </div>
+          </div>
+        </div>             
+      </div>
+    </div>
+  </div>
+</main>
+<% include partials/footer %>  
