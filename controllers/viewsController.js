@@ -5,7 +5,7 @@
  * File Description: logical javaScript statements to control HTML views
  */
 
-// Module used to send email 
+ // Module used to send email 
  const nodemailer = require('nodemailer');
 
  // Each function below control one view (index, about, projects, services and contact) 
@@ -53,33 +53,45 @@ exports.homePage = (req, res, next) => {
     const message = 'Feel free to contact me about job propositions or questions';
     res.render('contact', { 
       title: 'Contact',
-      message });      
-
-      /*
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'yourEmail@gmail.com',
-          pass: 'yourPassword'
-        }
-      });
-      
-      const mailOptions = {
-        from: 'yourEmail@gmail.com',
-        to: 'myfriend@yahoo.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
-      };
-      
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          return console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      });
-      */
+      message,
+      isActive: 'contact',
+     });      
   };
 
-
+  exports.sendemail = (req, res) => {
+    // Generate test SMTP service account from ethereal.email
+    // Only needed if you don't have a real mail account for testing
+    nodemailer.createTestAccount((err, account) => {
+      // Create reusable transporter object using the default SMTP transport
+      const transporter = nodemailer.createTransport({
+        host: process.env.MAIL_HOST,
+        port: process.env.MAIL_PORT,
+        auth: {
+          user: process.env.MAIL_USER,
+          pass: process.env.MAIL_PASS,
+        },
+      });
+  
+      // Setup email data with unicode symbols
+      const mailOptions = {
+        from: req.body.email, // Sender address
+        to: 'bar@example.com, baz@example.com', // List of receivers
+        subject: 'message from portfolio contact form', // Subject line
+        text: req.body.message, // Plain text body
+        html: `<b>${req.body.message}</b>`, // HTML body
+      };
+  
+      // Send mail with defined transport object
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);
+        // Preview only available when sending through an Ethereal account
+        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+      });
+    });
+  
+    res.redirect('/');
+  };
   
