@@ -58,6 +58,7 @@ exports.homePage = (req, res, next) => {
      });      
   };
 
+  // Code obtained from https://nodemailer.com; used to setup contact form 
   exports.sendemail = (req, res) => {
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
