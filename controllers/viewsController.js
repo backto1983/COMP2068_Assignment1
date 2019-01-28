@@ -17,7 +17,7 @@ exports.homePage = (req, res, next) => {
   };
   
   exports.about = (req, res, next) => {
-    const message = 'I am a Computer Programmer student, currently enrolled at Georgian College. My program focus on developing scripting and query languages skills, including Java, JavaScript, C# and SQL. In the last 2 years, I learned how to design and manipulate applications and databases. Owner of a Master’s Degree, during which there was constant use of office and statistical softwares. The data obtained in my research had to be analyzed, reported and discussed, which helped me acquire examination and investigative skills.';
+    const message = 'I am a Computer Programmer graduate from Georgian College. My program focused on developing scripting and query languages skills, including Java, JavaScript and SQL. In the last 2 years, I learned how to design and manipulate applications and databases. Owner of a Master’s Degree, during which there was constant use of office and statistical softwares. The data obtained in my research had to be analyzed, reported and discussed, which helped me acquire examination and investigative skills.';
     const quote = '"The limits of the possible can only be defined by going beyond them into the impossible." (Clarke, A. C.)';
     res.render('about', { 
       title: 'About',
